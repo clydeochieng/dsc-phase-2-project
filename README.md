@@ -38,7 +38,6 @@ The biggest business recommendations from this exercise were:
 * Giving Tools such as the map to existing developers, home-buyers, and real-estate offices
 ##### Next Steps
 * More geographic data (schools, hospitals, parks, etc) could improve the model accuracy
-* Data across time is particularly interesting
 * More tools could be built and integrated into the workflow of existing decision-makers
 For more information
 See the full analysis in the Jupyter Notebook or review the presentation in the pdf.
