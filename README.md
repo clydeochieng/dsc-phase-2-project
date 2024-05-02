@@ -30,3 +30,24 @@ In building our model, a few predictors stood out as much more important than ot
 Waterfront properties correlated with an almost 50% increase in price.
 Square Footage of living space was perhaps the most consistent numeric predictor.Most were later removed from the model to reduce redundant information (or multicollinearity).
 Homes described as “Excellent” , “Luxury” , or “Mansion” naturally correlated with price increases, while poor home condition was reflected by a 36% decrease in home value. Positive descriptions of home condition were not as impacting as negative ones.
+##### Conclusions
+The biggest business recommendations from this exercise were:
+
+* More validation should be done to see to what degree this sort of prediction can realistically steer investments
+* More feedback should be collected from those within the industry on how they currently make decisions
+* Giving Tools such as the map to existing developers, home-buyers, and real-estate offices
+##### Next Steps
+* More geographic data (schools, hospitals, parks, etc) could improve the model accuracy
+* Data across time is particularly interesting
+* More tools could be built and integrated into the workflow of existing decision-makers
+For more information
+See the full analysis in the Jupyter Notebook or review the presentation in the pdf.
+
+##### Repository Structure
+├── data
+│   └── kc_house_data.csv
+├── Graphics
+├── Flatiron Files
+├── Presentation.pdf
+├── README.md
+└── Student.ipynb
