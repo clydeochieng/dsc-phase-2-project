@@ -16,23 +16,12 @@ Alternative Hypothesis: There is a relationship between our independent variable
 ##### Data Understanding
 In this project, we utilized the King County House Sales dataset, which serves as the foundational dataset for our analysis. It was sourced from Kaggle. The dataset encompasses comprehensive information regarding house sales within King County, Washington, USA. It comprises a diverse array of features, including the number of bedrooms, bathrooms, square footage, as well as geographical and pricing details of the properties sold. This dataset is frequently employed in data science and machine learning endeavors, particularly for predictive modeling tasks such as regression analysis aimed at forecasting house prices based on the provided features.
 
-##### King County Housing Data Columns
-The column names contained in column_names.md are:
-
-* `id`: A unique identifier for each house sale.
-* `date`: The date when the house was sold.
-* `price`: The sale price of the house, serving as the target variable for predictive modeling.
-* `bedrooms`, `bathrooms`, `sqft_living`, `sqft_lot`: Numerical features representing the number of bedrooms and bathrooms, as well as the living area and lot area of the house, respectively.
-* `floors`: The number of floors in the house.
-* `waterfront`, `view`, `condition`, `grade`: Categorical features describing aspects such as waterfront availability, property view, condition, and overall grade assigned to the housing unit.
-* `yr_built`, `yr_renovated`: Year of construction and renovation of the house.
-* `zipcode`, `lat`, `long`: Geographical features including ZIP code, latitude, and longitude coordinates.
-* `sqft_above`, `sqft_basement`, `sqft_living15`, `sqft_lot15`: Additional numerical features providing details about the house's above-ground and basement square footage, as well as living area and lot area of the nearest 15 neighboring houses..
 ##### The Data
-This project primarily uses the King County House Sales dataset, which can be found in kc_house_data.csv in the data folder in this project's GitHub repository. The description of the column names can be found in column_names.md in the same folder. Data on neighborhood names for various zipcodes in King County can also be found in king_county_neighborhoods.csv in the data folder and was used in the construction of the final model.
-##### Data Loading and Preparation
-We load the dataset and prepare it for analysis by performing data cleaning tasks such as handling missing values and outliers.
-##### Exploratory Data Analysis (EDA)
-We conduct exploratory data analysis to gain insights into the dataset's characteristics and relationships between variables. This involves visualizations such as histograms, box plots, and correlation matrices.
-##### Data Analysis
-We calculate statistics for numeric columns and explore relationships between categorical features and the target variable (house prices).
+The data in this project is real-estate information from King County with over 20000 rows and 21 columns. The data was transformed and cleaned in a number of ways, such as splitting the data into numeric, categoric, and location data, transforming the numeric data to log numeric, splitting the categories to dummy columns, and dropping columns that seem like bad predictors in a linear regression (like latitude and longitude).
+
+##### Methods
+To build our predictive model, we perform a 75-25 split into train and test sets and run a multiple linear regression using ordinary-least squares to estimate prices. When we run this model on all of our data, it becomes clear that some of the p-values (which measure confidence) and correlation coefficients (impact) of some columns are less useful, so a few iterations are made to clean up these inputs.
+
+##### Validation
+We want to make sure the model is accurate before we use it for anything. This can be measured by R-squared and mean-squared error on test data. The final predictive power here had an R-squared of 0.85 and a mean-squared error of 0.04 on unseen log data. We also want to make sure that the big assumptions for linear regression are not ignored, such as linearity, normality, and homoscedasticity. Linearity and homoscedasticity are specific to every feature, but a sense of normality can be seen in the QQ plot.
+![qq_plot](image-1.png)
