@@ -25,3 +25,8 @@ To build our predictive model, we perform a 75-25 split into train and test sets
 ##### Validation
 We want to make sure the model is accurate before we use it for anything. graphs suggested that the residuals here are normally distributed compared to the base model. We also want to make sure that the big assumptions for linear regression are not ignored, such as linearity, normality, and homoscedasticity. Linearity and homoscedasticity are specific to every feature, but a sense of normality can be seen in the QQ plot
 ![qq_plot](image-1.png)
+Findings
+In building our model, a few predictors stood out as much more important than others. Location data like Grade predicted the most about a property’s price.
+Waterfront properties correlated with an almost 50% increase in price.
+Square Footage of living space was perhaps the most consistent numeric predictor.Most were later removed from the model to reduce redundant information (or multicollinearity).
+Homes described as “Excellent” , “Luxury” , or “Mansion” naturally correlated with price increases, while poor home condition was reflected by a 36% decrease in home value. Positive descriptions of home condition were not as impacting as negative ones.
