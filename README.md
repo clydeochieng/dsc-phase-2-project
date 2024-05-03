@@ -30,17 +30,20 @@ In building our model, a few predictors stood out as much more important than ot
 Waterfront properties correlated with an almost 50% increase in price.
 Square Footage of living space was perhaps the most consistent numeric predictor.Most were later removed from the model to reduce redundant information (or multicollinearity).
 Homes described as “Excellent” , “Luxury” , or “Mansion” naturally correlated with price increases, while poor home condition was reflected by a 36% decrease in home value. Positive descriptions of home condition were not as impacting as negative ones.
-##### Conclusions
-The biggest business recommendations from this exercise were:
-
-* More validation should be done to see to what degree this sort of prediction can realistically steer investments
-* More feedback should be collected from those within the industry on how they currently make decisions
-* Giving Tools such as the map to existing developers, home-buyers, and real-estate offices
-##### Next Steps
-* More geographic data (schools, hospitals, parks, etc) could improve the model accuracy
-* More tools could be built and integrated into the workflow of existing decision-makers
-For more information
-See the full analysis in the Jupyter Notebook or review the presentation in the pdf.
+##### Conclusion
+The square footage of the living area is one of the consistent numeric
+variables
+The parameters R squared increases from one model to another, to indicate
+that the more predictor variables are used the more refined the model
+Properties in sought-after areas, like waterfront or downtown areas, are
+limited and highly prized.
+##### Recommendation
+Highlight properties with higher grades to appeal to luxury buyers seeking
+premium features and amenities.
+Emphasize spacious interiors and versatile floor plans to attract buyers
+looking for ample living space for their needs.
+Capitalize on properties with desirable views by showcasing them
+prominently in marketing materials and virtual tours.
 
 ##### Repository Structure
 ├── data
